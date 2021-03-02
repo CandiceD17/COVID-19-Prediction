@@ -160,37 +160,3 @@ def mape(pred, true):
 
 TestScore = mape(predict, testY[0,:])
 print('Test Score: %.2f MAPE' % (TestScore))
-
-
-
-
-
-
-
-
-
-# def logistic_model(x,a,b,c):
-#     return c/(1+np.exp(-(x-b)/a))
-# def exponential_model(x, a, b, c):
-#     return a * np.exp(b * (x - c))
-
-
-# x =cum_data["Day"].tolist()
-# y =cum_data["Confirmed"].tolist()
-# fit1 = curve_fit(logistic_model,x,y)
-# y_pred_logistic=[logistic_model(i,fit1[0][0],fit1[0][1],fit1[0][2]) for i in x]
-# fit2 = curve_fit(exponential_model,x,y,maxfev=500000)
-# plt.plot(x,y, label="True data" )
-# plt.plot(x,[exponential_model(i,fit2[0][0],fit2[0][1],fit2[0][2]) for i in x], label="Exponential result" )
-# plt.plot(x,[logistic_model(i,fit1[0][0],fit1[0][1],fit1[0][2]) for i in x], label="Logistic result" )
-# plt.legend()
-# plt.title('Confirmed')
-
-# plt.show()
-
-
-# # print(np.sum([abs(a-b)/abs(b) for a,b in zip(y_pred_exponential, y)]))
-# y_pred_exponential=[exponential_model(i,fit2[0][0],fit2[0][1],fit2[0][2]) for i in x]
-# print("logistic_model MAPE is:"+str(np.sum([abs(a-b)/abs(b) for a,b in zip(y_pred_logistic, y)])))
-# print("exponential_model MAPE is:"+str(np.sum([abs(a-b)/abs(b) for a,b in zip(y_pred_exponential, y)])))
-
